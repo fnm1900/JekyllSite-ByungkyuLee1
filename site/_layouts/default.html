@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
@@ -16,8 +16,17 @@
   </head>
 
   <body>
+    
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Navlink</a></li>
+          <li><a href="#">Navlink</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main class="container">
+    <main>
       {{ content }}
     </main>
 

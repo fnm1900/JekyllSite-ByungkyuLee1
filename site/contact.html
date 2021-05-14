@@ -1,0 +1,27 @@
+---
+layout: default
+images:
+- src: https://via.placeholder.com/320x480
+  alt: Photo of a thing
+- src: https://via.placeholder.com/320x480
+  alt: Photo of a thing
+- src: https://via.placeholder.com/320x480
+  alt: Photo of a thing
+- src: https://via.placeholder.com/320x480
+  alt: Photo of a thing
+---
+
+<section class="contact">
+  <div class="images">
+    {% for img in page.images %}
+    <img src="{{img.src}}" alt="{{img.alt}}">
+    {% endfor %}
+  </div>
+  <article>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+  </article>
+  <form>
+
+  </form>
+</section>

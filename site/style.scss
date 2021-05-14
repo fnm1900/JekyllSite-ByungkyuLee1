@@ -46,11 +46,59 @@ small, .text_small {font-size: 0.75rem;}
 
 // Layout styles
 
+html { scroll-behavior: smooth }
+
 header {
   position: fixed;
   z-index: 10;
 }
 
+// about
+
+section#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// products
+
+section.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product .info {
+    background: black;
+    color: white;
+    padding: 1rem;
+}
+
+// contact
+
+section.contact {
+  padding-top: 8rem;
+  display: grid;
+  grid-gap: 2rem;
+
+  .images, article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  article {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// intros
 
 section.intro {
   background-image: linear-gradient(rgba(4,19,20,0.7),rgba(4,9,20,0.7)), url(/images/banner.jpg);

@@ -1,0 +1,28 @@
+---
+layout: default
+products:
+- name: Product name
+  img: https://via.placeholder.com/320x160
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.
+- name: Product name
+  img: https://via.placeholder.com/320x160
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.
+- name: Product name
+  img: https://via.placeholder.com/320x160
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.
+- name: Product name
+  img: https://via.placeholder.com/320x160
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.
+---
+
+<section class="products">
+  {% for product in page.products %}
+  <div class="product">
+      <img src="{{product.img}}" alt="{{product.name}} photo">
+      <div class="info">
+          <h3>{{product.name}}</h3>
+          <p>{{product.description}}</p>
+      </div>
+  </div>
+  {% endfor %}
+</section>

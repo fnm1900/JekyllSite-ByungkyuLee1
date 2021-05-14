@@ -124,6 +124,15 @@ section#about {
   justify-content: center;
 }
 
+about.myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter: brightness(50%);
+}
+
 section.products {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -132,28 +141,31 @@ section.products {
 
 .product img {
   width: 100%;
+  margin-top: 10rem;
 }
 
 .product .info {
-  background: black;
+  background-color: #505457;
   color: white;
   padding: 1rem;
 }
 
 section.contact {
-  padding-top: 8rem;
+  padding-top: 14rem;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 5rem;
+  background-color: #505457;
+  color: white;
 }
 
 section.contact .images, section.contact article {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
 }
 
 section.contact article {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 section.intro {

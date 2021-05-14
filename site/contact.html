@@ -1,27 +1,35 @@
 ---
 layout: default
 images:
-- src: https://via.placeholder.com/320x480
-  alt: Photo of a thing
-- src: https://via.placeholder.com/320x480
-  alt: Photo of a thing
-- src: https://via.placeholder.com/320x480
-  alt: Photo of a thing
-- src: https://via.placeholder.com/320x480
-  alt: Photo of a thing
+- src: https://cdn.pixabay.com/photo/2013/04/12/06/03/darts-102919_960_720.jpg
+  alt: Photo of a efficiency
+- src: https://cdn.pixabay.com/photo/2017/07/20/09/08/lamp-2521654_960_720.png
+  alt: Photo of a simplicity
+- src: https://cdn.pixabay.com/photo/2017/03/23/12/56/security-2168234_960_720.jpg
+  alt: Photo of a safety
 ---
 
 <section class="contact">
   <div class="images">
     {% for img in page.images %}
-    <img src="{{img.src}}" alt="{{img.alt}}">
+    <img src="{{img.src}}" alt="{{img.alt}}" width ="300px" height="300px">
     {% endfor %}
   </div>
   <article>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+    <p><b>Efficiency</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+    
+    <p><b>Simplicity</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+    
+    <p><b>Safety</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
   </article>
-  <form>
+  
+  <div class="nav-links">
+          <ul>
+            <li><a href="https://www.facebook.com"><img src="/site/images/facebook.png"></a></li>
+            <li><a href="https://www.twitter.com"><img src="/site/images/twitter.png"></a></li>
+            <li><a href="https://www.instagram.com"><img src="/site/images/instagram.png"></a></li>
+            <li><a href="https://www.youtube.com"><img src="/site/images/youtube.png"></a></li>
+          </ul>
+  </div>
 
-  </form>
 </section>

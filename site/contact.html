@@ -1,4 +1,5 @@
 ---
+title: Contact
 layout: default
 images:
 - src: https://cdn.pixabay.com/photo/2013/04/12/06/03/darts-102919_960_720.jpg
@@ -10,26 +11,28 @@ images:
 ---
 
 <section class="contact">
-  <div class="images">
-    {% for img in page.images %}
-    <img src="{{img.src}}" alt="{{img.alt}}" width ="300px" height="300px">
-    {% endfor %}
-  </div>
-  <article>
-    <p><b>Efficiency</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+  <div class="container">
+    <div class="images">
+      {% for img in page.images %}
+      <img src="{{img.src}}" alt="{{img.alt}}" width ="300px" height="300px">
+      {% endfor %}
+    </div>
+    <article>
+      <p><b>Efficiency</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+      
+      <p><b>Simplicity</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+      
+      <p><b>Safety</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
+    </article>
     
-    <p><b>Simplicity</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
-    
-    <p><b>Safety</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur sem vel orci maximus malesuada. Nam non consectetur purus. Integer ac porta ligula, nec viverra lorem. Etiam convallis massa at ex bibendum volutpat. Quisque quis magna vitae neque mollis gravida. Cras in.</p>
-  </article>
-  
-  <div class="nav-links">
-          <ul>
-            <li><a href="https://www.facebook.com"><img src="/site/images/facebook.png"></a></li>
-            <li><a href="https://www.twitter.com"><img src="/site/images/twitter.png"></a></li>
-            <li><a href="https://www.instagram.com"><img src="/site/images/instagram.png"></a></li>
-            <li><a href="https://www.youtube.com"><img src="/site/images/youtube.png"></a></li>
-          </ul>
+    <div class="nav-links">
+            <ul>
+              <li><a href="https://www.facebook.com"><img src="/images/facebook.png" alt="facebook icon"></a></li>
+              <li><a href="https://www.twitter.com"><img src="/images/twitter.png" alt="twitter icon"></a></li>
+              <li><a href="https://www.instagram.com"><img src="/images/instagram.png" alt="instagram icon"></a></li>
+              <li><a href="https://www.youtube.com"><img src="/images/youtube.png" alt="youtube icon"></a></li>
+            </ul>
+    </div>
   </div>
 
 </section>

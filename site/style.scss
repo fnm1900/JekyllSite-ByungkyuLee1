@@ -48,37 +48,22 @@ small, .text_small {font-size: 0.75rem;}
 
 html { scroll-behavior: smooth }
 
+.container {
+  margin: 0 3rem;
+}
+
 header {
   position: fixed;
   z-index: 10;
 }
 
-// about
-
-section#about {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
-}
-
-about.myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  filter: brightness(50%);
-}
-
-
 // products
 
-section.products {
+section.products .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4rem;
+    margin-bottom: 4rem;
 }
 
 .product img {
@@ -95,18 +80,26 @@ section.products {
 // contact
 
 section.contact {
-  
-  padding-top: 14rem;
-  display: grid;
-  grid-gap: 5rem;
+
   background-color:#505457;
   color: white;
+  height: 100vh;
+  
+  .container {
+    padding-top: 14rem;
+    display: grid;
+    grid-gap: 5rem;
+  }
 
   .images, article {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
     //align-content: center;
+  }
+
+  .images img {
+    justify-self: center;
   }
 
   article {
@@ -117,7 +110,7 @@ section.contact {
 
 // intros
 
-section.intro {
+section.intro, section#about {
   background-image: linear-gradient(rgba(4,19,20,0.7),rgba(4,9,20,0.7)), url(/images/banner.jpg);
   background-position: center;
   background-size: cover;
@@ -132,7 +125,6 @@ section.intro {
   .content {
     position: relative;
     z-index: 1;
-    //padding: 0.625rem 0.25rem;
     
     h1 {
       text-align: center;
@@ -145,28 +137,20 @@ section.intro {
   }
 }
 
-section.intro2 {
-  background: linear-gradient(rgba(79,82,86, 1),rgba(4,19,20,0.7));
-  
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  width: 100vw;
-  height: 50vh;
-  //color: white;
+// about
 
-  .content {
-    position: relative;
-    z-index: 1;
-    
-    h5 {
-      text-align: center;
-      transform: translate(0%, 0%);
-    }
-    p {
-      text-align: left;
-      //padding: 4.625rem 2.25rem;
-    }
+section#about {
+  background: black;
+  overflow: hidden;
+
+  #myVideo {
+    position: absolute;
+    filter: brightness(30%);
+    transform: translate(-50%,-50%);
+    min-height: 100%;
+    min-width: 100%;
+    left: 50%;
+    top: 50%;
   }
 }
 
@@ -210,6 +194,11 @@ nav img{
   display: block;
   margin: auto;
   transition: 0.5s;
+}
+
+.product-nav {
+  .nav-links ul li a { color: #111; }
+  .nav-links ul li::after, .menu-trigger div { background: #111; }
 }
 
 .nav-links ul li:hover::after {

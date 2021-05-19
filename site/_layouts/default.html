@@ -18,8 +18,18 @@
   <body>
     
     <header>
+      {% if page.title == "Product" %}
+      <nav class="product-nav">
+      {% else %}
       <nav>
-        <a class="logo" href="/"><img src="/images/logo.png"></a>
+      {% endif %}
+        <a class="logo" href="/#home">
+          {% if page.title == "Product" %}
+          <img src="/images/logo_black.png">
+          {% else %}
+          <img src="/images/logo_white.png">
+          {% endif %}
+        </a>
         <div class="menu-trigger">
           <div></div>
           <div></div>
@@ -27,8 +37,8 @@
         </div>
         <div class="nav-links">
           <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
+            <li><a href="/#home">HOME</a></li>
+            <li><a href="/#about">ABOUT</a></li>
             <li><a href="/product">PRODUCT</a></li>
             <li><a href="/contact">CONTACT</a></li>
           </ul>

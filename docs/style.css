@@ -112,31 +112,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.container {
+  margin: 0 3rem;
+}
+
 header {
   position: fixed;
   z-index: 10;
 }
 
-section#about {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-about.myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  filter: brightness(50%);
-}
-
-section.products {
+section.products .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4rem;
+  margin-bottom: 4rem;
 }
 
 .product img {
@@ -151,11 +140,15 @@ section.products {
 }
 
 section.contact {
+  background-color: #505457;
+  color: white;
+  height: 100vh;
+}
+
+section.contact .container {
   padding-top: 14rem;
   display: grid;
   grid-gap: 5rem;
-  background-color: #505457;
-  color: white;
 }
 
 section.contact .images, section.contact article {
@@ -164,11 +157,15 @@ section.contact .images, section.contact article {
   grid-gap: 2rem;
 }
 
+section.contact .images img {
+  justify-self: center;
+}
+
 section.contact article {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-section.intro {
+section.intro, section#about {
   background-image: linear-gradient(rgba(4, 19, 20, 0.7), rgba(4, 9, 20, 0.7)), url(/images/banner.jpg);
   background-position: center;
   background-size: cover;
@@ -181,42 +178,34 @@ section.intro {
   color: white;
 }
 
-section.intro .content {
+section.intro .content, section#about .content {
   position: relative;
   z-index: 1;
 }
 
-section.intro .content h1 {
+section.intro .content h1, section#about .content h1 {
   text-align: center;
   transform: translate(0%, -50%);
 }
 
-section.intro .content h5 {
+section.intro .content h5, section#about .content h5 {
   text-align: left;
   padding: 4.625rem 2.25rem;
 }
 
-section.intro2 {
-  background: linear-gradient(#4f5256, rgba(4, 19, 20, 0.7));
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  width: 100vw;
-  height: 50vh;
+section#about {
+  background: black;
+  overflow: hidden;
 }
 
-section.intro2 .content {
-  position: relative;
-  z-index: 1;
-}
-
-section.intro2 .content h5 {
-  text-align: center;
-  transform: translate(0%, 0%);
-}
-
-section.intro2 .content p {
-  text-align: left;
+section#about #myVideo {
+  position: absolute;
+  filter: brightness(30%);
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  left: 50%;
+  top: 50%;
 }
 
 nav {
@@ -260,6 +249,14 @@ nav img {
   display: block;
   margin: auto;
   transition: 0.5s;
+}
+
+.product-nav .nav-links ul li a {
+  color: #111;
+}
+
+.product-nav .nav-links ul li::after, .product-nav .menu-trigger div {
+  background: #111;
 }
 
 .nav-links ul li:hover::after {
